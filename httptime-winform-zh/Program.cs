@@ -30,6 +30,10 @@ namespace httptime_winform_zh
                     RestartAsAdmin();
                     return;
                 }
+
+#if !DEBUG
+                return;
+#endif
             }
 
             Application.EnableVisualStyles();

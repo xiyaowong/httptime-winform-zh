@@ -81,10 +81,21 @@ namespace httptime_winform_zh
 
             var retryCount = 0;
 
-            while (retryCount < eps)
+            while (true)
             {
                 await Task.Delay(TimeSpan.FromMilliseconds(50 + retryCount));
+
                 retryCount++;
+                if (retryCount > 10)
+                {
+                    MessageBox.Show(
+                        "同步失败，请重试。或者增大误差值、使用连接更快的地址。",
+                        "错误",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    break;
+                }
 
                 try
                 {

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "httptime-winform-zh", "httptime-winform-zh\httptime-winform-zh.csproj", "{CEAB99D2-F325-4C9F-8A33-FF069AB4221A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEAB99D2-F325-4C9F-8A33-FF069AB4221A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEAB99D2-F325-4C9F-8A33-FF069AB4221A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEAB99D2-F325-4C9F-8A33-FF069AB4221A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEAB99D2-F325-4C9F-8A33-FF069AB4221A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B7FEDE8-F7BD-4B4F-A79F-E550218B12B0}
+	EndGlobalSection
+EndGlobal

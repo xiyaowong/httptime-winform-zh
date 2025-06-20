@@ -5,7 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Security;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -66,7 +68,16 @@ namespace httptime_winform_zh
             }
 
             var eps = (int)epsUpDown.Value;
-            var client = new HttpClient { Timeout = TimeSpan.FromSeconds(1) };
+            var handler = new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (
+                    HttpRequestMessage req,
+                    X509Certificate2 cert,
+                    X509Chain chain,
+                    SslPolicyErrors errors
+                ) => true,
+            };
+            var client = new HttpClient(handler) { Timeout = TimeSpan.FromSeconds(1) };
 
             var retryCount = 0;
 

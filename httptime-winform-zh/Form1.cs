@@ -128,7 +128,8 @@ namespace httptime_winform_zh
 
                     var newTime = DateTime.Now.Add(offset);
 
-                    var message = $"确定同步至 {newTime:yyyy-MM-dd HH:mm:ss}吗?";
+                    var message =
+                        $"确定同步至 {newTime:yyyy-MM-dd HH:mm:ss} 吗? 误差大概 {rtt / 2 / 1000:F2} 秒";
                     var result = MessageBox.Show(
                         message,
                         "确认同步",
@@ -160,7 +161,7 @@ namespace httptime_winform_zh
 
                     break;
                 }
-                catch (HttpRequestException ex)
+                catch (Exception ex)
                 {
                     retryCount++;
                 }

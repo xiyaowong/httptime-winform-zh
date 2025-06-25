@@ -21,6 +21,48 @@ namespace httptime_winform_zh
             InitializeComponent();
 
             MinimumSize = MaximumSize = Size;
+
+            button_40.Click += button_click;
+            button_60.Click += button_click;
+            button_80.Click += button_click;
+            button_100.Click += button_click;
+            button_120.Click += button_click;
+
+            button_baidu.Click += button_click;
+            button_163.Click += button_click;
+        }
+
+        private void button_click(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            if (button == button_40)
+            {
+                epsUpDown.Value = 40;
+            }
+            else if (button == button_60)
+            {
+                epsUpDown.Value = 60;
+            }
+            else if (button == button_80)
+            {
+                epsUpDown.Value = 80;
+            }
+            else if (button == button_100)
+            {
+                epsUpDown.Value = 100;
+            }
+            else if (button == button_120)
+            {
+                epsUpDown.Value = 120;
+            }
+            else if (button == button_baidu)
+            {
+                urlBox.Text = "http://www.baidu.com";
+            }
+            else if (button == button_163)
+            {
+                urlBox.Text = "http://www.163.com";
+            }
         }
 
         private async void syncButton_Click(object sender, EventArgs e)
